@@ -37,13 +37,16 @@ const RicePredictionForm = () => {
         numericData[key] = parseFloat(formData[key]);
       });
 
-      const response = await fetch("http://127.0.0.1:5000/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(numericData),
-      });
+      const response = await fetch(
+        "https://machine-learning-model-be-production.up.railway.app/predict",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(numericData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Prediction failed");
