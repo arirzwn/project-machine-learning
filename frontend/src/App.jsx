@@ -23,7 +23,7 @@ function App() {
           </main>
 
           <footer className="text-center mt-16 text-gray-300">
-            <p>Powered by Machine Learning & React.js</p>
+            <p></p>
           </footer>
         </div>
       </div>
